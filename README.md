@@ -40,7 +40,7 @@ D84、D92M、Davis
 
 
 # 🚀  How to run 
-## 1、Training and testing on other datasets
+## 1、Training and testing on exsiting datasets
 
 ### Step 1: Obtain protein PDB structure files
 python data_processing/download_all_pdb.py
@@ -59,8 +59,14 @@ If using a custom dataset, follow the same steps:
 
 ### Step 1: Obtain protein PDB structure files
 python data_processing/download_all_pdb.py
-1、Extract Uniprot IDs and obtain PDB structure files.(Input: Contains the Uniprot ID of the protein for querying the PDB database. For example：XXX/XXX.csv
-Provides a mapping from Uniprot ID to PDB ID for downloading PDB structure files. For example：XXX/XXX.tsv)
+
+1、To acquire the PDB structure files for proteins, the following input files are required:
+Uniprot.txt – This file contains the Uniprot IDs of all proteins, serving as the primary input.
+non390_pidmapping.tsv – This file maps each Uniprot ID to its corresponding PDB ID. The PDB IDs need to be retrieved from the UniProt ID mapping tool available at:
+👉 https://www.uniprot.org/id-mapping
+On the left panel, select "UniProtKB/AC ID" as the input.
+On the right panel, choose "PDB" as the output.
+This mapping file (non390_pidmapping.tsv) will then be used to fetch the relevant PDB structures for each protein.
 2、Use AlphaFold predictions if no PDB file is available.  
 3、Select the best PDB file (based on resolution & coverage).
 4、Convert proteins & compounds into graphs.
