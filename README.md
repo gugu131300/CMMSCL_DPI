@@ -29,6 +29,17 @@ D84、D92M、Davis
 
 # 1、Training and testing on existing datasets（Davis、D84、D92M）
 -------
+## Preprocessing protein data
+-------
+### Obtain protein PDB data
+python /data processing/download_all_pdb.py
+
+### Preprocess to obtain protein graph
+python protein_graph.py
+
+### Preprocessing compound data
+python compound_graph.py
+
 ## Train and Test the model
 -------
 python train_cl2RWR_class.py
@@ -41,6 +52,14 @@ python train_cl2RWR_class.py
 ## Preprocessing protein data
 -------
 ### Obtain protein PDB data
+This project aims to extract the Uniprot ID of proteins from the Davis dataset and query the corresponding PDB structure file in the PDB database.
+If there is no structure file for a protein in the PDB database, the PDB structure predicted by AlphaFold is used as an alternative.
+In addition, if a protein corresponds to multiple PDB structure files, the structure file with the best resolution and coverage is selected as the final structure.
+
+Input:
+Contains the Uniprot ID of the protein for querying the PDB database.   For example：XXX/XXX.csv
+Provides a mapping from Uniprot ID to PDB ID for downloading PDB structure files.     For example：XXX/XXX.tsv
+
 python /data processing/download_all_pdb.py
 
 ### Preprocess to obtain protein graph
