@@ -73,8 +73,16 @@ This mapping file (non390_pidmapping.tsv) will then be used to fetch the relevan
 5、Train & test the model.
 ### Step 2: Convert protein structures into graphs
 python protein_graph.py
+
+The input PDB files required for protein_graph.py must be obtained from the output of download_all_pdb.py. Ensure that you have successfully executed download_all_pdb.py beforehand to fetch and store all necessary PDB structure files.
 ### Step 3: Convert compounds into molecular graphs
 python compound_graph.py
+
+file_path_compound.CSV File with Compound Information
+The input file should contain at least the following columns:
+COMPOUND_SMILES: The SMILES representation of each compound.
+COMPOUND_ID: A unique identifier for each compound.
+
 ### Step 4: Train & Test the model
 python train_cl2RWR_class.py
 
