@@ -18,7 +18,7 @@ CMMSCL-DPI is a **cross-modal multi-structural contrastive learning model** that
 
 # **🔧  Requirements**
 Ensure the following dependencies are installed:
-```bash
+```
 - python 3.10
 - cudatoolkit 11.3.1
 - pytorch 2.1.0+cu121
@@ -28,6 +28,7 @@ Ensure the following dependencies are installed:
 - scipy 1.13.0
 - dgl 2.4.0+cu118
 - fair-esm 2.0.0
+```
 -------
 
 
