@@ -2,7 +2,7 @@
 **Cross-Modal Multi-Structural Contrastive Learning for Predicting Drug-Protein Interactions**
 --------
 
-# **📌 Abstract**
+# **📌 Abstract **
 Predicting drug-protein interactions (DPI) is essential for effective and safe drug discovery. Although deep learning methods have been extensively applied to DPI prediction, effectively leveraging the multi-structural and multi-modal data of drugs and proteins to enhance prediction accuracy remains a significant challenge. This study proposed CMMSCL-DPI, a cross-modal multi-structural contrastive learning model. CMMSCL-DPI applies contrastive learning to the multi-dimensional structural features of proteins and drugs separately and integrates interaction features from a DPI heterogeneous graph network to facilitate cross-modal contrastive learning. This approach effectively captures the key differences and similarities between proteins and drugs, significantly enhancing the model's generalization capabilities for novel drug-target pairs. Experimental results across three benchmark datasets demonstrate that CMMSCL-DPI outperforms five state-of-the-art baseline models in overall performance. Additionally, the model successfully identified an unreported drug-protein interaction, which was subsequently validated through all-atom molecular dynamics simulations. This case study not only confirms the predictive accuracy of CMMSCL-DPI but also underscores its potential in discovering novel protein-ligand interactions. In summary, CMMSCL-DPI exhibits high efficiency and broad applicability in advancing the drug discovery process.
 
 CMMSCL-DPI is a **cross-modal multi-structural contrastive learning model** that:
@@ -10,13 +10,13 @@ CMMSCL-DPI is a **cross-modal multi-structural contrastive learning model** that
 - Integrates **interaction features from a DPI heterogeneous graph network**.
 - Enhances generalization to **novel drug-target pairs** via **contrastive learning**.
 
-# **🔬 Key Results:**
+# **🔬 Key Results: **
 - **Outperforms** 5 state-of-the-art models on three benchmark datasets.
 - Successfully **identified a novel drug-protein interaction**, later validated via **molecular dynamics simulations**.
 - Demonstrates **high efficiency** and **broad applicability** in drug discovery.
 --------
 
-# **🔧  Requirements**
+# **🔧  Requirements: **
 Ensure the following dependencies are installed:
 ```
 - python 3.10
@@ -38,7 +38,7 @@ D84、D92M、Davis
 -------
 
 
-# **🚀  How to run**
+# **🚀  How to run **
 ## 1、Training and testing on other datasets
 
 ### Step 1: Obtain protein PDB structure files
