@@ -63,10 +63,10 @@ python data_processing/download_all_pdb.py
 - To obtain the PDB structure files for proteins, the following input files are required:
 protein_id.txt – This file contains the Uniprot IDs of all proteins and serves as the primary input for mapping protein sequences to structural data.
 non390_pidmapping.tsv – This file establishes a mapping between Uniprot IDs and their corresponding PDB IDs, which are necessary for retrieving the structural information from the PDB database.
-The PDB IDs need to be retrieved from the UniProt ID mapping tool available at:👉 https://www.uniprot.org/id-mapping
-On the left panel, select "UniProtKB/AC ID" as the input.
-On the right panel, choose "PDB" as the output.
-This mapping file (non390_pidmapping.tsv) will then be used to fetch the relevant PDB structures for each protein.
+The PDB IDs need to be retrieved from the UniProt ID mapping tool available at:👉 https://www.uniprot.org/id-mapping  
+On the left panel, select "UniProtKB/AC ID" as the input.  
+On the right panel, choose "PDB" as the output.  
+This mapping file (non390_pidmapping.tsv) will then be used to fetch the relevant PDB structures for each protein.  
 - Use AlphaFold predictions if no PDB file is available.  
 - Select the best PDB file (based on resolution & coverage).
 - Convert proteins & compounds into graphs.
