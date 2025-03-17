@@ -60,10 +60,10 @@ If using a custom dataset, follow the same steps:
 ### Step 1: Obtain protein PDB structure files
 python data_processing/download_all_pdb.py
 
-1、To acquire the PDB structure files for proteins, the following input files are required:
-protein id.txt – This file contains the Uniprot IDs of all proteins, serving as the primary input.
-non390_pidmapping.tsv – This file maps each Uniprot ID to its corresponding PDB ID. The PDB IDs need to be retrieved from the UniProt ID mapping tool available at:
-👉 https://www.uniprot.org/id-mapping
+1、To obtain the PDB structure files for proteins, the following input files are required:
+protein_id.txt – This file contains the Uniprot IDs of all proteins and serves as the primary input for mapping protein sequences to structural data.
+non390_pidmapping.tsv – This file establishes a mapping between Uniprot IDs and their corresponding PDB IDs, which are necessary for retrieving the structural information from the PDB database.
+The PDB IDs need to be retrieved from the UniProt ID mapping tool available at:👉 https://www.uniprot.org/id-mapping
 On the left panel, select "UniProtKB/AC ID" as the input.
 On the right panel, choose "PDB" as the output.
 This mapping file (non390_pidmapping.tsv) will then be used to fetch the relevant PDB structures for each protein.
@@ -74,11 +74,12 @@ This mapping file (non390_pidmapping.tsv) will then be used to fetch the relevan
 ### Step 2: Convert protein structures into graphs
 python protein_graph.py
 
-The input PDB files required for protein_graph.py must be obtained from the output of download_all_pdb.py. Ensure that you have successfully executed download_all_pdb.py beforehand to fetch and store all necessary PDB structure files.
+The input PDB files required for protein_graph.py must be obtained from the output of download_all_pdb.py. 
+Ensure that you have successfully executed download_all_pdb.py beforehand to fetch and store all necessary PDB structure files.
 ### Step 3: Convert compounds into molecular graphs
 python compound_graph.py
 
-file_path_compound.CSV File with Compound Information
+Inputs：CSV File with Compound Information
 The input file should contain at least the following columns:
 COMPOUND_SMILES: The SMILES representation of each compound.
 COMPOUND_ID: A unique identifier for each compound.
