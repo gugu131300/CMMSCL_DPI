@@ -74,7 +74,7 @@ This mapping file (non390_pidmapping.tsv) will then be used to fetch the relevan
 ### Step 2: Convert protein structures into graphs
 python protein_graph.py
 
-The input PDB files required for protein_graph.py must be obtained from the output of download_all_pdb.py. 
+The input PDB files required for protein_graph.py must be obtained from the output of download_all_pdb.py.   
 Ensure that you have successfully executed download_all_pdb.py beforehand to fetch and store all necessary PDB structure files.
 ### Step 3: Convert compounds into molecular graphs
 python compound_graph.py
