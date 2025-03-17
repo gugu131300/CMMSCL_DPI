@@ -30,12 +30,14 @@ Ensure the following dependencies are installed:
 - fair-esm 2.0.0
 -------
 
-# Datasets
+**📦 Requirements**
 CMMSCL-DPI supports the following datasets:
 D84、D92M、Davis
 -------
 
-# How to run
+**📦 How to run**
+
+# 1、Training and testing on other datasets
 
 # Step 1: Obtain protein PDB structure files
 python data_processing/download_all_pdb.py
@@ -52,20 +54,27 @@ python train_cl2RWR_class.py
 
 
 # 2、Training and testing on other datasets
--------
 
 If using a custom dataset, follow the same steps:
-
-Extract Uniprot IDs and obtain PDB structure files.
-Use AlphaFold predictions if no PDB file is available.
-Select the best PDB file (based on resolution & coverage).
-Convert proteins & compounds into graphs.
-Train & test the model.
-
+# Step 1: Obtain protein PDB structure files
 python data_processing/download_all_pdb.py
+1、Extract Uniprot IDs and obtain PDB structure files.(Input: Contains the Uniprot ID of the protein for querying the PDB database. For example：XXX/XXX.csv
+Provides a mapping from Uniprot ID to PDB ID for downloading PDB structure files. For example：XXX/XXX.tsv)
+2、Use AlphaFold predictions if no PDB file is available.  
+3、Select the best PDB file (based on resolution & coverage).
+4、Convert proteins & compounds into graphs.
+5、Train & test the model.
+
+# Step 2: Convert protein structures into graphs
 python protein_graph.py
+
+# Step 3: Convert compounds into molecular graphs
 python compound_graph.py
+
+# Step 4: Train & Test the model
 python train_cl2RWR_class.py
+-------
+
 
 
 
