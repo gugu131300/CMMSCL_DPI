@@ -20,7 +20,22 @@ Predicting drug-protein interactions (DPI) is essential for effective and safe d
 - dgl 2.4.0+cu118
 - fair-esm 2.0.0
 
+# Datasets
+-------
+D84、D92M、Davis
+
 # How to run
+-------
+
+# 1、Training and testing on existing datasets（Davis、D84、D92M）
+-------
+## Train and Test the model
+-------
+python train_cl2RWR_class.py
+
+
+
+# 2、Training and testing on other datasets
 -------
 
 ## Preprocessing protein data
@@ -33,7 +48,6 @@ python protein_graph.py
 
 ### Preprocessing compound data
 python compound_graph.py
-
 
 ## Train and Test the model
 -------
