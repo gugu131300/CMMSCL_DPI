@@ -62,27 +62,27 @@ python data_processing/download_all_pdb.py
 
 - To obtain the PDB structure files for proteins, the following input files are required:
 protein_id.txt – This file contains the Uniprot IDs of all proteins and serves as the primary input for mapping protein sequences to structural data.
-non390_pidmapping.tsv – This file establishes a mapping between Uniprot IDs and their corresponding PDB IDs, which are necessary for retrieving the structural information from the PDB database.
-The PDB IDs need to be retrieved from the UniProt ID mapping tool available at:👉 https://www.uniprot.org/id-mapping  
-On the left panel, select "UniProtKB/AC ID" as the input.  
-On the right panel, choose "PDB" as the output.  
-This mapping file (non390_pidmapping.tsv) will then be used to fetch the relevant PDB structures for each protein.  
-- Use AlphaFold predictions if no PDB file is available.  
-- Select the best PDB file (based on resolution & coverage).
-- Convert proteins & compounds into graphs.
-- Train & test the model.
+non390_pidmapping.tsv – This file establishes a mapping between Uniprot IDs and their corresponding PDB IDs, which are necessary for retrieving the structural information from the PDB database.   
+The PDB IDs need to be retrieved from the UniProt ID mapping tool available at:👉 https://www.uniprot.org/id-mapping    
+On the left panel, select "UniProtKB/AC ID" as the input.    
+On the right panel, choose "PDB" as the output.    
+This mapping file (non390_pidmapping.tsv) will then be used to fetch the relevant PDB structures for each protein.    
+- Use AlphaFold predictions if no PDB file is available.    
+- Select the best PDB file (based on resolution & coverage).  
+- Convert proteins & compounds into graphs.  
+- Train & test the model.  
 ### Step 2: Convert protein structures into graphs
 python protein_graph.py
 
 The input PDB files required for protein_graph.py must be obtained from the output of download_all_pdb.py.   
-Ensure that you have successfully executed download_all_pdb.py beforehand to fetch and store all necessary PDB structure files.
+Ensure that you have successfully executed download_all_pdb.py beforehand to fetch and store all necessary PDB structure files.  
 ### Step 3: Convert compounds into molecular graphs
 python compound_graph.py
 
-Inputs：CSV File with Compound Information  
-The input file should contain at least the following columns:  
-COMPOUND_SMILES: The SMILES representation of each compound.  
-COMPOUND_ID: A unique identifier for each compound.  
+Inputs：CSV File with Compound Information    
+The input file should contain at least the following columns:     
+COMPOUND_SMILES: The SMILES representation of each compound.     
+COMPOUND_ID: A unique identifier for each compound.      
 
 ### Step 4: Train & Test the model
 python train_cl2RWR_class.py
