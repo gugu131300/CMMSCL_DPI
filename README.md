@@ -43,7 +43,7 @@ D84、D92M、Davis
 ## 1、Training and testing on exsiting datasets
 
 ### Step 1: Obtain protein PDB structure files
-python data_processing/download_all_pdb.py
+python /data_processing/download_all_pdb.py
 ### Step 2: Convert protein structures into graphs
 python protein_graph.py
 ### Step 3: Convert compounds into molecular graphs
