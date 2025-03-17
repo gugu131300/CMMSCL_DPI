@@ -16,7 +16,7 @@ CMMSCL-DPI is a **cross-modal multi-structural contrastive learning model** that
 - Demonstrates **high efficiency** and **broad applicability** in drug discovery.
 --------
 
-# **📦 Requirements**
+# **🔧  Requirements**
 Ensure the following dependencies are installed:
 ```bash
 - python 3.10
@@ -30,12 +30,13 @@ Ensure the following dependencies are installed:
 - fair-esm 2.0.0
 -------
 
-# **📦 Datasets **
+
+# **🗂  Datasets **
 CMMSCL-DPI supports the following datasets:
 D84、D92M、Davis
 -------
 
-# **📦 How to run**
+# **🚀  How to run**
 
 ## 1、Training and testing on other datasets
 
