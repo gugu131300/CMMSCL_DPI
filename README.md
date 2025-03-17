@@ -60,17 +60,17 @@ If using a custom dataset, follow the same steps:
 ### Step 1: Obtain protein PDB structure files
 python data_processing/download_all_pdb.py
 
-1、To obtain the PDB structure files for proteins, the following input files are required:
+- To obtain the PDB structure files for proteins, the following input files are required:
 protein_id.txt – This file contains the Uniprot IDs of all proteins and serves as the primary input for mapping protein sequences to structural data.
 non390_pidmapping.tsv – This file establishes a mapping between Uniprot IDs and their corresponding PDB IDs, which are necessary for retrieving the structural information from the PDB database.
 The PDB IDs need to be retrieved from the UniProt ID mapping tool available at:👉 https://www.uniprot.org/id-mapping
 On the left panel, select "UniProtKB/AC ID" as the input.
 On the right panel, choose "PDB" as the output.
 This mapping file (non390_pidmapping.tsv) will then be used to fetch the relevant PDB structures for each protein.
-2、Use AlphaFold predictions if no PDB file is available.  
-3、Select the best PDB file (based on resolution & coverage).
-4、Convert proteins & compounds into graphs.
-5、Train & test the model.
+- Use AlphaFold predictions if no PDB file is available.  
+- Select the best PDB file (based on resolution & coverage).
+- Convert proteins & compounds into graphs.
+- Train & test the model.
 ### Step 2: Convert protein structures into graphs
 python protein_graph.py
 
@@ -79,10 +79,10 @@ Ensure that you have successfully executed download_all_pdb.py beforehand to fet
 ### Step 3: Convert compounds into molecular graphs
 python compound_graph.py
 
-Inputs：CSV File with Compound Information
-The input file should contain at least the following columns:
-COMPOUND_SMILES: The SMILES representation of each compound.
-COMPOUND_ID: A unique identifier for each compound.
+Inputs：CSV File with Compound Information  
+The input file should contain at least the following columns:  
+COMPOUND_SMILES: The SMILES representation of each compound.  
+COMPOUND_ID: A unique identifier for each compound.  
 
 ### Step 4: Train & Test the model
 python train_cl2RWR_class.py
