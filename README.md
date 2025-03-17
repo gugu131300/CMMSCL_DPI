@@ -49,6 +49,7 @@ python protein_graph.py
 python compound_graph.py
 ### Step 4: Train & Test the model
 python train_cl2RWR_class.py
+
 -------
 
 
@@ -69,4 +70,5 @@ python protein_graph.py
 python compound_graph.py
 ### Step 4: Train & Test the model
 python train_cl2RWR_class.py
+
 -------
