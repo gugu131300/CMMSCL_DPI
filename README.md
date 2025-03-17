@@ -10,13 +10,13 @@ CMMSCL-DPI is a **cross-modal multi-structural contrastive learning model** that
 - Integrates **interaction features from a DPI heterogeneous graph network**.
 - Enhances generalization to **novel drug-target pairs** via **contrastive learning**.
 
-**🔬 Key Results:**
+# **🔬 Key Results:**
 - **Outperforms** 5 state-of-the-art models on three benchmark datasets.
 - Successfully **identified a novel drug-protein interaction**, later validated via **molecular dynamics simulations**.
 - Demonstrates **high efficiency** and **broad applicability** in drug discovery.
 --------
 
-**📦 Requirements**
+# **📦 Requirements**
 Ensure the following dependencies are installed:
 ```bash
 - python 3.10
@@ -30,33 +30,33 @@ Ensure the following dependencies are installed:
 - fair-esm 2.0.0
 -------
 
-**📦 Requirements**
+# **📦 Datasets **
 CMMSCL-DPI supports the following datasets:
 D84、D92M、Davis
 -------
 
-**📦 How to run**
+# **📦 How to run**
 
-# 1、Training and testing on other datasets
+## 1、Training and testing on other datasets
 
-# Step 1: Obtain protein PDB structure files
+### Step 1: Obtain protein PDB structure files
 python data_processing/download_all_pdb.py
 
-# Step 2: Convert protein structures into graphs
+### Step 2: Convert protein structures into graphs
 python protein_graph.py
 
-# Step 3: Convert compounds into molecular graphs
+### Step 3: Convert compounds into molecular graphs
 python compound_graph.py
 
-# Step 4: Train & Test the model
+### Step 4: Train & Test the model
 python train_cl2RWR_class.py
 -------
 
 
-# 2、Training and testing on other datasets
+## 2、Training and testing on other datasets
 
 If using a custom dataset, follow the same steps:
-# Step 1: Obtain protein PDB structure files
+### Step 1: Obtain protein PDB structure files
 python data_processing/download_all_pdb.py
 1、Extract Uniprot IDs and obtain PDB structure files.(Input: Contains the Uniprot ID of the protein for querying the PDB database. For example：XXX/XXX.csv
 Provides a mapping from Uniprot ID to PDB ID for downloading PDB structure files. For example：XXX/XXX.tsv)
@@ -65,16 +65,12 @@ Provides a mapping from Uniprot ID to PDB ID for downloading PDB structure files
 4、Convert proteins & compounds into graphs.
 5、Train & test the model.
 
-# Step 2: Convert protein structures into graphs
+### Step 2: Convert protein structures into graphs
 python protein_graph.py
 
-# Step 3: Convert compounds into molecular graphs
+### Step 3: Convert compounds into molecular graphs
 python compound_graph.py
 
-# Step 4: Train & Test the model
+### Step 4: Train & Test the model
 python train_cl2RWR_class.py
 -------
-
-
-
-
